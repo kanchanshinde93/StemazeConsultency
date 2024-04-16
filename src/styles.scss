@@ -1,11 +1,25 @@
-@import '@core/scss/core.scss';
+// @import '@core/scss/core.scss';
 @import './assets/scss/styles';
 
+
+@font-face {
+    font-family: "Roboto";
+    src: url(assets/fonts/Roboto/Roboto-Regular.ttf) format();
+}
+
+body {
+    // font-family: "Roboto", sans-serif;
+ 
+    // font-style: normal
+  }
+
+$primary: #000000;
 
 button.btn.btn-block.waves-effect.waves-float.waves-light {
     background-color: black;
     color: white;
 }
+
 .custom-control-label::before {
     position: absolute;
     top: 0.225rem;
@@ -18,12 +32,194 @@ button.btn.btn-block.waves-effect.waves-float.waves-light {
     background-color: #fff;
     border: #000000 solid 1px;
 }
-.custom-control-input:checked ~ .custom-control-label::before {
-    color: #fff;
+
+.custom-control-input:checked~.custom-control-label::before {
+    color: #000000;
     border-color: #000000;
     background-color: #000000;
 }
+
 label {
     color: #000000;
-    font-size: 0.857rem;
+    font-size: 18px;
+    font-weight: 500;
+
 }
+
+input.form-control.ng-untouched.ng-pristine.ng-invalid {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
+}
+
+.input-group:not(.bootstrap-touchspin):focus-within {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
+}
+
+button.btn.btn-block.waves-effect.waves-float.waves-light {
+    margin-top: 17px;
+}
+
+.form-control:focus {
+    color: #000000;
+    background-color: #fff;
+    border-color: transparent;
+    outline: 0;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
+}
+
+.input-group:not(.bootstrap-touchspin):focus-within .form-control,
+.input-group:not(.bootstrap-touchspin):focus-within .input-group-text {
+    box-shadow: none;
+    border: none;
+}
+
+button.btn.log {
+    padding: 14px;
+}
+
+.icon {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.icon img {
+    height: 100%;
+    width: 100%;
+    max-width: 53px;
+}
+
+// login screen css
+h2.card-title.heading {
+    font-size: 36px;
+    color: #000000;
+    font-weight: 700;
+    text-align: center;
+}
+
+.auth-wrapper.auth-v2 {
+    padding: 20px 0;
+}
+
+.form-group.btn-remember {
+    margin-bottom: 50px;
+    margin-top: 25 px;
+}
+
+span.input-group-text.cursor-pointer {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
+}
+
+
+// header css
+img.header-logo {
+    height: 100%;
+    width: 100%;
+    max-width: 80px;
+}
+
+button.login-btn {
+    background-color: black;
+    color: white;
+    border: navajowhite;
+    outline: navajowhite;
+    padding: 8px 19px;
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+// sevices page csss
+.service-ctn h3 {
+    font-size: 23px;
+    font-weight: 700;
+    color: black;
+}
+
+.service-ctn {
+    padding-top: 14px;
+}
+
+.service-ctn p {
+    color: black;
+    font-weight: 400;
+}
+.tagline.text-center.p-0 h1 {
+    color: #030303;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 83px;
+    padding: 50px 0;
+}
+.services-image img {
+    width: 100%;
+}
+
+.service-column {
+    text-align: start;
+}
+section#consultant {
+    padding-top: 100px;
+} 
+.consultant-img img {
+    width: 80%;
+}
+.card.black.plan{
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
+}
+.c-ctn h1 {
+    font-size: 39px;
+}
+
+
+
+
+// inventory csss
+.inventory-img.text-center img {
+    width: 100%;
+}
+.button-on-image {
+    position: absolute;
+    right: -4%;
+    bottom: 0%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+section#inventory {
+    position: relative;
+    padding-top: 100px;
+}
+section#testimonial{
+    padding: 100px 0;
+}
+.testimonial-heading {
+    margin-bottom: 40px;
+}
+nav.social li {
+    list-style: none;
+    margin: 0 10px;
+}
+.menu li{
+    list-style: none;
+    margin: 0 10px;
+}
+.menu li a{
+   text-decoration: none;
+}
+
+
+
+
+
+
+// about css
+.col-md-6.mycss {
+    margin-bottom: 60px;
+}
+.col-md-6.about-img img {
+    border-radius: 9px;
+    // width: 100%;
+}
+

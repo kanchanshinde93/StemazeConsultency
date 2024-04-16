@@ -1,0 +1,35 @@
+footer {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px 0;
+    text-align: center;
+    
+  }
+
+  .footer-section {
+    display: inline-block;
+    width: 30%; /* Adjust according to your layout */
+  }
+
+  .left {
+    text-align: left;
+  }
+
+  .right {
+    text-align: right;
+  }
+
+  /* Optional: Add styling to the links */
+  .footer-section ul {
+    margin-top: 10px;
+  }
+
+  .footer-section ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+
+  .footer-section ul li a {
+    color: #000000;
+    text-decoration: none;
+  }
