@@ -24,6 +24,7 @@ export class AuthLoginV2Component implements OnInit {
 
   // Private
   private _unsubscribeAll: Subject<any>;
+mobileForm: any;
 
   /**
    * Constructor

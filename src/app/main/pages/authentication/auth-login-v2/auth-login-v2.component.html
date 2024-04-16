@@ -6,7 +6,7 @@
     >
     <!-- /Brand logo-->
     <!-- Left Text-->
-    <div class="d-none d-lg-flex col-lg-8 align-items-center p-5">
+    <!-- <div class="d-none d-lg-flex col-lg-8 align-items-center p-5">
       <div class="w-100 d-lg-flex align-items-center justify-content-center px-5">
         <img
           class="img-fluid"
@@ -18,12 +18,12 @@
           alt="Login V2"
         />
       </div>
-    </div>
+    </div> -->
     <!-- /Left Text-->
     <!-- Login-->
-    <div class="d-flex col-lg-4 align-items-center auth-bg px-2 p-lg-5">
+    <div class="d-flex col-lg-12 align-items-center auth-bg px-2 p-lg-5"> 
       <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
-        <h2 class="card-title font-weight-bold mb-1">Welcome to Vuexy! 👋</h2>
+        <h2 class="card-title font-weight-bold mb-1">Professional Profile</h2>
         <p class="card-text mb-2">Please sign-in to your account and start the adventure</p>
 
         <ngb-alert [type]="'danger'" [dismissible]="false" *ngIf="error">
@@ -89,11 +89,14 @@
           <div class="form-group">
             <div class="custom-control custom-checkbox">
               <input class="custom-control-input" id="remember-me" type="checkbox" tabindex="3" />
-              <label class="custom-control-label" for="remember-me"> Remember Me</label>
+              <label class="custom-control-label" for="remember-me"> Remember my password</label>
             </div>
           </div>
-          <button [disabled]="loading" class="btn btn-primary btn-block" tabindex="4" rippleEffect>
-            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Sign in
+          <button [disabled]="loading" class="btn  btn-block" tabindex="4" rippleEffect>
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Log in
+          </button>
+          <button [disabled]="loading" class="btn btn-block" tabindex="4" rippleEffect>
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Sign up
           </button>
         </form>
         <p class="text-center mt-2">
@@ -111,6 +114,10 @@
         </div>
       </div>
     </div>
+
+
+
+    
     <!-- /Login-->
   </div>
 </div>

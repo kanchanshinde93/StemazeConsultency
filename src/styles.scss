@@ -1,2 +1,29 @@
 @import '@core/scss/core.scss';
 @import './assets/scss/styles';
+
+
+button.btn.btn-block.waves-effect.waves-float.waves-light {
+    background-color: black;
+    color: white;
+}
+.custom-control-label::before {
+    position: absolute;
+    top: 0.225rem;
+    left: -1.5rem;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    pointer-events: none;
+    content: "";
+    background-color: #fff;
+    border: #000000 solid 1px;
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #000000;
+    background-color: #000000;
+}
+label {
+    color: #000000;
+    font-size: 0.857rem;
+}
