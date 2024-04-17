@@ -43,7 +43,7 @@ label {
     color: #000000;
     font-size: 18px;
     font-weight: 500;
-
+    margin-bottom: 8px;
 }
 
 input.form-control.ng-untouched.ng-pristine.ng-invalid {
@@ -73,7 +73,7 @@ button.btn.btn-block.waves-effect.waves-float.waves-light {
 }
 
 button.btn.log {
-    padding: 14px;
+    padding: 10px 10px;
 }
 
 .icon {
@@ -100,12 +100,35 @@ h2.card-title.heading {
 }
 
 .form-group.btn-remember {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     margin-top: 25 px;
 }
 
 span.input-group-text.cursor-pointer {
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
+}
+label.custom-control-label {
+    margin-left: 7px;
+}
+button.btn.log.btn-block.d-flex.waves-effect.waves-float.waves-light {
+    width: 100%;
+}
+button.btn.log.btn-block.waves-effect.waves-float.waves-light {
+    width: 100%;
+}
+.input-group-text {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
 }
 
 
@@ -125,6 +148,9 @@ button.login-btn {
     font-weight: 400;
     font-size: 16px;
     border-radius: 5px;
+}
+#header{
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
 }
 
 // sevices page csss
@@ -276,9 +302,9 @@ footer {
     font-size: 60px;
     font-weight: 600;
 }
-button.login-btn {
-    margin-top: 30px;
-}
+// button.login-btn {
+//     margin-top: 30px;
+// }
 .shape-ctn h1 {
     font-size: 60px;
     font-weight: 700;
