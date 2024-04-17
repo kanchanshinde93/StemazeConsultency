@@ -1,4 +1,4 @@
-import { Component, Inject, OnDestroy, OnInit, ElementRef, Renderer2 } from '@angular/core';
+import { Component, Inject, OnDestroy, OnInit, ElementRef, Renderer2, NgZone } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 
@@ -18,6 +18,8 @@ import { locale as menuEnglish } from 'app/menu/i18n/en';
 import { locale as menuFrench } from 'app/menu/i18n/fr';
 import { locale as menuGerman } from 'app/menu/i18n/de';
 import { locale as menuPortuguese } from 'app/menu/i18n/pt';
+import { NavigationEnd, Router } from '@angular/router';
+import { Console } from 'console';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +27,10 @@ import { locale as menuPortuguese } from 'app/menu/i18n/pt';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
+  isLoggedIn: boolean = false; // Assuming initially user is not logged in
+
+  // Function to toggle login status (you might have your own implementation)
+ 
   coreConfig: any;
   menu: any;
   defaultLanguage: 'en'; // This language will be used as a fallback when a translation isn't found in the current language
@@ -32,6 +38,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   // Private
   private _unsubscribeAll: Subject<any>;
+  login: boolean;
 
   /**
    * Constructor
@@ -57,8 +64,21 @@ export class AppComponent implements OnInit, OnDestroy {
     private _coreLoadingScreenService: CoreLoadingScreenService,
     private _coreMenuService: CoreMenuService,
     private _coreTranslationService: CoreTranslationService,
-    private _translateService: TranslateService
+    private _translateService: TranslateService,
+    private zone: NgZone, private router: Router
   ) {
+
+    this.router.events.subscribe((event: any) => {
+     console.log(event);
+     
+      if (event instanceof NavigationEnd) {
+        if (event.url === '/pages/authentication/login-v2') {
+          this.login= true;
+        } else {
+          this.login= false;
+        }
+      }
+    });
     // Get the application main menu
     this.menu = menu;
 
@@ -87,7 +107,12 @@ export class AppComponent implements OnInit, OnDestroy {
   /**
    * On init
    */
+
+ 
+ 
   ngOnInit(): void {
+
+   
     // Init wave effect (Ripple effect)
     Waves.init();
 
@@ -125,11 +150,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
       // Set the default language to 'en' and then back to 'fr'.
 
-      setTimeout(() => {
+      /* setTimeout(() => {
         this._translateService.setDefaultLang('en');
         this._translateService.setDefaultLang(appLanguage);
       });
-
+ */
       /**
        * !Fix: ngxTranslate
        * ----------------------------------------------------------------------------------------------------
@@ -205,13 +230,13 @@ export class AppComponent implements OnInit, OnDestroy {
       } else {
         this._elementRef.nativeElement.classList.remove('blank-page');
         // ! Fix: Transition issue while coming from blank page
-        setTimeout(() => {
-          this._renderer.setAttribute(
-            this._elementRef.nativeElement.getElementsByClassName('app-content')[0],
-            'style',
-            'transition:300ms ease all'
-          );
-        }, 0);
+        // setTimeout(() => {
+        //   this._renderer.setAttribute(
+        //     this._elementRef.nativeElement.getElementsByClassName('app-content')[0],
+        //     'style',
+        //     'transition:300ms ease all'
+        //   );
+        // }, 0);
         // If navbar hidden
         if (this.coreConfig.layout.navbar.hidden) {
           this._elementRef.nativeElement.classList.add('navbar-hidden');
