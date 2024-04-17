@@ -73,7 +73,7 @@ mobileForm: any;
   }
   openModel(data:any){
     this.modalService.open(data, {
-      size: "xl",
+      size: "md",
       centered: true,
       scrollable: true,
       keyboard: false,

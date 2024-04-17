@@ -16,18 +16,18 @@ button.btn.btn-block.waves-effect.waves-float.waves-light {
     color: white;
 }
 
-.custom-control-label::before {
-    position: absolute;
-    top: 0.225rem;
-    left: -1.5rem;
-    display: block;
-    width: 1rem;
-    height: 1rem;
-    pointer-events: none;
-    content: "";
-    background-color: #fff;
-    border: #000000 solid 1px;
-}
+// .custom-control-label::before {
+//     position: absolute;
+//     top: 0.225rem;
+//     left: -1.5rem;
+//     display: block;
+//     width: 1rem;
+//     height: 1rem;
+//     pointer-events: none;
+//     content: "";
+//     background-color: #fff;
+//     border: #000000 solid 1px;
+// }
 
 .custom-control-input:checked~.custom-control-label::before {
     color: #000000;
@@ -125,6 +125,19 @@ button.btn.log.btn-block.waves-effect.waves-float.waves-light {
     background-color: #e9ecef;
     border: 1px solid #ced4da;
     border-radius: .25rem;
+}
+// login popup
+button.login-btn.popup {
+    width: 30%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+button.close {
+    border: white;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
 }
 
 
