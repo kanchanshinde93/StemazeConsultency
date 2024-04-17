@@ -18,6 +18,9 @@ import { coreConfig } from 'app/app-config';
 import { AppComponent } from 'app/app.component';
 import { LayoutModule } from 'app/layout/layout.module';
 import { SampleModule } from 'app/main/sample/sample.module';
+import { FooterComponent } from './commonlayout/footer/footer.component';
+import { HeaderComponent } from './commonlayout/header/header.component';
+
 
 const appRoutes: Routes = [
   {
@@ -36,7 +39,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, FooterComponent, HeaderComponent,],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
