@@ -4,7 +4,7 @@
             <!-- <a class="navbar-brand"> <img class="header-logo img-fluid" src="../../../../assets/images/myimages/logo.png" alt=""></a> -->
             <a class="navbar-brand">STEMAZE Consultency</a>
             <form class="d-flex">
-                <button class="login-btn">Login/Sigup</button>
+                <button class="login-btn"  [routerLink]="['/pages/authentication/login-v2']">Login/Sigup</button>
             </form>
         </div>
     </nav>
@@ -15,58 +15,76 @@
             </div>
             <div class="row text-center">
                 <div class="col-md-3">
-                    <div class="service-column">
-                        <div class="services-image">
-                            <img cl src="../../../../assets/images/myimages/Image.png" alt="">
+                    <div class="card black plan">
+                        <div class="card-body p-4">
+                            <div class="service-column">
+                                <div class="services-image">
+                                    <img cl src="../../../../assets/images/myimages/Image.png" alt="">
+                                </div>
+                                <div class="service-ctn">
+                                    <h3>Career Navigation</h3>
+                                    <p>Guidance and support for your career <br> path
+                                    </p>
+                                </div>
+                                <button class="login-btn">Book Now</button>
+                            </div>
                         </div>
-                        <div class="service-ctn">
-                            <h3>Career Navigation</h3>
-                            <p>Guidance and support for your career path
-                            </p>
-                        </div>
-                        <button class="login-btn">Book Now</button>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="service-column">
-                        <div class="services-image">
-                            <img src="../../../../assets/images/myimages/Image (1).png" alt="">
+                    <div class="card black plan">
+                        <div class="card-body p-4">
+                            <div class="service-column">
+                                <div class="services-image">
+                                    <img src="../../../../assets/images/myimages/Image (1).png" alt="">
+                                </div>
+                                <div class="service-ctn">
+                                    <h3>Research Guidance</h3>
+                                    <p>Expert guidance for your research endeavors
+                                    </p>
+                                </div>
+                                <button class="login-btn">Book Now</button>
+                            </div>
                         </div>
-                        <div class="service-ctn">
-                            <h3>Research Guidance</h3>
-                            <p>Expert guidance for your research endeavors
-                            </p>
-                        </div>
-                        <button class="login-btn">Book Now</button>
                     </div>
-
                 </div>
+               
                 <div class="col-md-3">
-                    <div class="service-column">
-                        <div class="services-image">
-                            <img src="../../../../assets/images/myimages/Image (2).png" alt="">
+                    <div class="card black plan">
+                        <div class="card-body p-4">
+                            <div class="service-column">
+                                <div class="services-image">
+                                    <img src="../../../../assets/images/myimages/Image (2).png" alt="">
+                                </div>
+                                <div class="service-ctn">
+                                    <h3>International Student Support</h3>
+                                    <p>Support services for international students
+                                    </p>
+                                </div>
+                                <button class="login-btn">Book Now</button>
+                            </div>
                         </div>
-                        <div class="service-ctn">
-                            <h3>International Student Support</h3>
-                            <p>Support services for international students
-                            </p>
-                        </div>
-                        <button class="login-btn">Book Now</button>
                     </div>
                 </div>
+                
                 <div class="col-md-3">
-                    <div class="service-column">
-                        <div class="services-image">
-                            <img src="../../../../assets/images/myimages/Image (3).png" alt="">
+                    <div class="card black plan">
+                        <div class="card-body p-4">
+                            <div class="service-column">
+                                <div class="services-image">
+                                    <img src="../../../../assets/images/myimages/Image (3).png" alt="">
+                                </div>
+                                <div class="service-ctn">
+                                    <h3>For the Organization</h3>
+                                    <p>Explore opportunities to study <br>abroad
+                                    </p>
+                                </div>
+                                <button class="login-btn">Book Now</button>
+                            </div>
                         </div>
-                        <div class="service-ctn">
-                            <h3>For the Organization</h3>
-                            <p>Explore opportunities to study abroad
-                            </p>
-                        </div>
-                        <button class="login-btn">Book Now</button>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>
@@ -181,31 +199,31 @@
     <div class="foot">
         <footer class="container-fluid">
             <div class="footer-section left p-0 m-0">
-                <ul>
+                <ul class="m-0">
                     <li><a href="#">Terms of Service</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Contact Us</a></li>
-                  </ul>
+                </ul>
             </div>
-          
+
             <div class="footer-section center">
-                <ul>
+                <ul class="m-0">
                     <li><a href="#"><img src="../../../../assets/images/myimages/Icon facebook.png" alt=""></a></li>
                     <li><a href="#"><img src="../../../../assets/images/myimages/Icon instagram.png" alt=""></a></li>
                     <li><a href="#"><img src="../../../../assets/images/myimages/Icon twitter.png" alt=""></a></li>
-                  </ul>
+                </ul>
             </div>
-          
+
             <div class="footer-section right">
                 <div class="form-group ">
-                    <select  class="form-control" name="cars" id="cars">
-                      <option hidden >English</option>
-                      <option value="saab">Hindi</option>
-                      <option value="opel">Marathi</option>
-                      <option value="audi">Tamil</option>
+                    <select class="form-control" name="cars" id="cars">
+                        <option hidden>English</option>
+                        <option value="saab">Hindi</option>
+                        <option value="opel">Marathi</option>
+                        <option value="audi">Tamil</option>
                     </select>
                 </div>
             </div>
-          </footer>          
+        </footer>
     </div>
 </section>

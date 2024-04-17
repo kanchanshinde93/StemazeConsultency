@@ -162,8 +162,9 @@ section#consultant {
 .consultant-img img {
     width: 80%;
 }
-.card.black.plan{
+.card.black.plan {
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
+    height: 100%;
 }
 .c-ctn h1 {
     font-size: 39px;
@@ -223,3 +224,97 @@ nav.social li {
     // width: 100%;
 }
 
+
+
+
+
+// footer section csss
+footer {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 18px 0;
+    text-align: center;
+}   
+
+  .footer-section {
+    display: inline-block;
+    width: 30%; 
+  }
+
+  .left {
+    text-align: left;
+  }
+
+  .right {
+    text-align: right;
+  }
+
+
+
+  .footer-section ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+
+  .footer-section ul li a {
+    color: #000000;
+    text-decoration: none;
+  }
+  .foot {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
+    margin-top: 22px;
+}   
+
+// footer setion css
+
+
+
+
+
+// mission page css
+.mission-ctn h1 {
+    font-size: 60px;
+    font-weight: 600;
+}
+button.login-btn {
+    margin-top: 30px;
+}
+.shape-ctn h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+.shape-ctn h1 {
+    font-size: 46px;
+    font-weight: 700;
+}
+.mission-ctn.text-center p {
+    max-width: 680px;
+    margin: 0 auto;
+}
+// section#mission {
+//     padding-top: 40px;
+// }
+section#shape {
+    padding-top: 40px;
+}
+section#students {
+    padding-top: 50px;
+}
+.shape-ctn {
+    line-height: 30px;
+}
+
+
+
+
+// session css
+.session-heading {
+    padding: 40px 0;
+    text-align: center;
+}
+.session-heading h1{
+   font-size: 40px;
+}
+.session-ctn h2 {
+    margin: 20px 0;
+}
