@@ -5,6 +5,8 @@ import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { Router } from '@angular/router';
 import { CoreConfigService } from '@core/services/config.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-auth-login-v2',
@@ -35,7 +37,8 @@ mobileForm: any;
     private _coreConfigService: CoreConfigService,
     private _formBuilder: UntypedFormBuilder,
     private _route: ActivatedRoute,
-    private _router: Router
+    private _router: Router,
+    private modalService: NgbModal, private toastr:ToastrService,
   ) {
     this._unsubscribeAll = new Subject();
 
@@ -68,7 +71,14 @@ mobileForm: any;
   togglePasswordTextType() {
     this.passwordTextType = !this.passwordTextType;
   }
-
+  openModel(data:any){
+    this.modalService.open(data, {
+      size: "xl",
+      centered: true,
+      scrollable: true,
+      keyboard: false,
+    });
+   }
   onSubmit() {
     this.submitted = true;
 

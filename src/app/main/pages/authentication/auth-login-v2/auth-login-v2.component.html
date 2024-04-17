@@ -12,12 +12,12 @@
                   <h2 class="card-title heading">Professional Profile</h2>
                   <!-- <p class="card-text mb-2">Please sign-in to your account and start the adventure</p> -->
           
-                  <ngb-alert [type]="'danger'" [dismissible]="false" *ngIf="error">
+                <!--   <ngb-alert [type]="'danger'" [dismissible]="false" *ngIf="error">
                     <div class="alert-body">
                       <p>{{ error }}</p>
                     </div>
                   </ngb-alert>
-          
+           -->
                   <form class="auth-login-form mt-5" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                     <div class="form-group">
                       <label class="form-label" for="login-email">Email ID</label>
@@ -82,8 +82,8 @@
                     <button [disabled]="loading" class="btn log  btn-block " tabindex="4" rippleEffect>
                       <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Log in
                     </button>
-                    <button [disabled]="loading" class="btn log btn-block" tabindex="4" rippleEffect>
-                      <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Sign up
+                    <button [disabled]="loading" class="btn log btn-block"  (click)="openModel(content)" tabindex="4" rippleEffect>
+                      <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1" ></span>Sign up
                     </button>
                   </form>
                   <!-- <p class="text-center mt-2">
@@ -111,3 +111,18 @@
   </div>
   
 </section>
+
+<!--  section modal-->
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Dear Trader/ Investor</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Fill out your profile. This will help us to notify you any potential oppertunies that might be benifical for you.</p>
+  </div>
+  <button class="login-btn aboutbtn">Get Started</button>
+</ng-template>
+<!--  section modal-->
